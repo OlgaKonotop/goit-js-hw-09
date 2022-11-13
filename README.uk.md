@@ -97,3 +97,20 @@ Pages, в ветку `gh-pages`, каждый раз когда обновляе
 3. Если все шаги прошли успешно, собранная продакшн версия файлов проекта
    отправляется в ветку `gh-pages`. В противном случае, в логе выполнения
    скрипта будет указано в чем проблема.
+
+function createPromise(position, delay) { return new Promise((resolve, reject)
+=> { const shouldResolve = Math.random() > 0.3;
+
+    setTimeout(() => {
+      if (shouldResolve) {
+        resolve(`✅ Fulfilled promise ${position} in ${delay}ms`);
+      }
+      reject(`❌ Rejected promise ${position} in ${delay}ms`);
+    }, delay);
+    //delay = delay + stepDelay;
+
+}); }
+
+createPromise(2, 1000) .then(result => { return console.log(result); //return
+(delay = delay + step); }) //Notify.success(result)) .catch( error =>
+console.log(error) // Notify.failure(error) );
